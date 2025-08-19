@@ -50,7 +50,7 @@ export function AboutSection() {
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-4 bg-card rounded-lg border">
-                  <div className="text-2xl font-bold text-primary">6+</div>
+                  <div className="text-2xl font-bold text-primary">10+</div>
                   <div className="text-sm text-muted-foreground">Tecnologias dominadas</div>
                 </div>
                 <div className="text-center p-4 bg-card rounded-lg border">

@@ -52,7 +52,7 @@ export function HeroSection() {
               size="lg"
               className="border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 bg-transparent"
             >
-              <a href="/Davi Peterson.pdf download">
+              <a href="/Davi Peterson.pdf" download>
                 Download CV
               </a>
             </Button>

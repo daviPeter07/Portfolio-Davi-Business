@@ -3,13 +3,15 @@ import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { ThemeProvider } from "@/src/components/theme-provider"
-import "./globals.css"
+  import "./globals.css"
 
 export const metadata: Metadata = {
   title: "Davi Peterson - Desenvolvedor de Software",
   description:
     "Portfólio profissional de Davi Peterson - Desenvolvedor Full Stack especializado em Next.js, Node.js e tecnologias modernas",
-  generator: "v0.app",
+  icons: {
+    icon: "/favicon.ico",
+  },
 }
 
 export default function RootLayout({
