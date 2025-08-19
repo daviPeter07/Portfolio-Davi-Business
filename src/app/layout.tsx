@@ -12,6 +12,15 @@ export const metadata: Metadata = {
   icons: {
     icon: "/meProfessional.jpg",
   },
+  keywords: [
+    "Davi Peterson",
+    "Desenvolvedor Full Stack",
+    "Next.js",
+    "Node.js",
+    "Portfolio",
+    "React",
+    "TypeScript",
+  ],
 };
 
 export default function RootLayout({
@@ -50,6 +59,8 @@ html {
               "@type": "Person",
               name: "Davi Peterson",
               url: "https://davi-peterson.vercel.app",
+              image: "/meProfessional.jpg",
+              email: "mailto:davipetersondev173@gmail.com",
               sameAs: [
                 "https://www.linkedin.com/in/davipeterson/",
                 "https://github.com/daviPeter07",
