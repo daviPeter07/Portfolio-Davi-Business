@@ -33,13 +33,13 @@ html {
         <meta property="og:description" content={String(metadata.description)} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://davi-peterson.vercel.app" />
-        <meta property="og:image" content="/banner-davi.jpg" />
+        <meta property="og:image" content="https://opengraph.b-cdn.net/production/images/45e1268b-86cd-49db-8d44-b2d2246f74a4.jpg?token=zBXpmuoggtRcZn5tWqDYOY5iKnD-XB7wnOGGJ6sEuMg&height=299&width=1200&expires=33291618338" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={String(metadata.title)} />
         <meta name="twitter:description" content={String(metadata.description)} />
-        <meta name="twitter:image" content="/banner-davi.jpg" />
+        <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/45e1268b-86cd-49db-8d44-b2d2246f74a4.jpg?token=zBXpmuoggtRcZn5tWqDYOY5iKnD-XB7wnOGGJ6sEuMg&height=299&width=1200&expires=33291618338" />
 
         {/* JSON-LD Structured Data */}
         <script
