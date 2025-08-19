@@ -145,7 +145,7 @@ export function ContactSection() {
                   Vamos conversar!
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Estou sempre aberto a discutir novos projetos, oportunidades
+                  Estou sempre disponível para discutir novos projetos, oportunidades
                   criativas ou parcerias interessantes. Não hesite em entrar em
                   contato!
                 </p>
