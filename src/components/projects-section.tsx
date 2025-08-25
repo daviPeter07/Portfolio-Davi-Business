@@ -9,35 +9,19 @@ const projects = [
   {
     title: "Nexus Skills",
     description:
-      "Plataforma completa de e-commerce com painel administrativo, sistema de pagamentos e gestão de estoque.",
-    image: "/modern-ecommerce-website.png",
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+      "Plataforma Nexus Skill com cursos para potencializar as softs skills das pessoas",
+    image: "/nexus-skill.png",
+    technologies: ["Next.js", "Typescript", "Tailwind" ,"Firebase", "Stripe"],
+    github: "https://github.com/repositorio privado",
+    demo: "https://não posso por o dominio.com",
   },
   {
-    title: "Task Management App",
-    description: "Aplicativo de gerenciamento de tarefas com colaboração em tempo real e notificações push.",
-    image: "/task-management-dashboard.png",
-    technologies: ["Next.js", "TypeScript", "MongoDB", "Socket.io"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    title: "Weather Dashboard",
-    description: "Dashboard meteorológico com previsões detalhadas, mapas interativos e alertas personalizados.",
-    image: "/weather-dashboard-interface.png",
-    technologies: ["React", "Python", "FastAPI", "Chart.js"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    title: "Social Media Analytics",
-    description: "Ferramenta de análise de redes sociais com relatórios automatizados e insights em tempo real.",
-    image: "/social-media-analytics-dashboard.png",
-    technologies: ["Vue.js", "Node.js", "Redis", "D3.js"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    title: "CashFlow UAPE",
+    description: "Software de gerenciamento de pagamentos da empresa UAPE, conforme categoria, funcionario e pagantes.",
+    image: "/uape-dashboard.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind" ,"Java", "Spring Boot", "MariaDB"],
+    github: "https://github.com/repositorio privado",
+    demo: "https://não posso por o dominio.com",
   },
 ]
 
@@ -74,16 +58,14 @@ export function ProjectsSection() {
             Meus <span className="text-primary">Projetos</span>
           </h2>
 
-          {/* AVISO DE PROJETOS FUTUROS */}
           <div className="flex items-center justify-center h-40">
             <p className="text-lg md:text-xl text-muted-foreground text-center italic">
               🚀 Projetos em breve...
             </p>
           </div>
 
-          {/*
-          --- Antiga grid de projetos (comentada para não perder código) ---
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          
+          {/* <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {projects.map((project, index) => (
               <Card key={project.title} className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
                 <div className="relative overflow-hidden">
@@ -124,8 +106,8 @@ export function ProjectsSection() {
                 </CardFooter>
               </Card>
             ))}
-          </div>
-          */}
+          </div> */}
+         
         </div>
       </div>
     </section>
