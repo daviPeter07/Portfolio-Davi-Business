@@ -10,19 +10,11 @@ const projects = [
     title: "Nexus Skills",
     description:
       "Plataforma Nexus Skill com cursos para potencializar as softs skills das pessoas",
-    image: "/nexus-skill.png",
-    technologies: ["Next.js", "Typescript", "Tailwind" ,"Firebase", "Stripe"],
-    github: "https://github.com/repositorio privado",
-    demo: "https://não posso por o dominio.com",
+    image: "/nexus-skill-web-image.png",
+    technologies: ["Next.js", "Typescript", "Tailwind" ,"Firebase"],
+    demo: "https://skill.nxshub.com.br/",
   },
-  {
-    title: "CashFlow UAPE",
-    description: "Software de gerenciamento de pagamentos da empresa UAPE, conforme categoria, funcionario e pagantes.",
-    image: "/uape-dashboard.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind" ,"Java", "Spring Boot", "MariaDB"],
-    github: "https://github.com/repositorio privado",
-    demo: "https://não posso por o dominio.com",
-  },
+  
 ]
 
 export function ProjectsSection() {
@@ -58,33 +50,27 @@ export function ProjectsSection() {
             Meus <span className="text-primary">Projetos</span>
           </h2>
 
-          <div className="flex items-center justify-center h-40">
+          {/* <div className="flex items-center justify-center h-40">
             <p className="text-lg md:text-xl text-muted-foreground text-center italic">
               🚀 Projetos em breve...
             </p>
-          </div>
+          </div> */}
 
           
-          {/* <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {projects.map((project, index) => (
               <Card key={project.title} className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden p-4">
                   <img
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-48 object-cover group-hover:scale-103 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                    <Button size="sm" variant="secondary" asChild>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        Código
-                      </a>
-                    </Button>
                     <Button size="sm" asChild>
                       <a href={project.demo} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
-                        Demo
+                        Navegar
                       </a>
                     </Button>
                   </div>
@@ -106,7 +92,7 @@ export function ProjectsSection() {
                 </CardFooter>
               </Card>
             ))}
-          </div> */}
+          </div>
          
         </div>
       </div>
