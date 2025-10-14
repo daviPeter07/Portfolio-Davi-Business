@@ -14,7 +14,14 @@ const projects = [
     technologies: ["Next.js", "Typescript", "Tailwind" ,"Firebase"],
     demo: "https://skill.nxshub.com.br/",
   },
-  
+  {
+    title: "Master Control",
+    description:
+      "Software de PDV usado para gerenciamento de vendas e clientes sem a necessidade de um estoque base",
+    image: "/master-control-image.png",
+    technologies: ["PHP", "Javascript", "MySQL", "Tailwind"],
+    demo: "https://github.com/daviPeter07/Master-Control",
+  },
 ]
 
 export function ProjectsSection() {
