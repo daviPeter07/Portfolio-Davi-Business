@@ -12,7 +12,6 @@ const experiences = [
     description: [
       "Experiência em montagem e manutenção de computadores, suporte técnico em Windows 10/11 e configuração de softwares e periféricos. Desenvolvi habilidades de diagnóstico, comunicação com usuários e documentação de processos, aprendizados que hoje aplico no desenvolvimento de software."
     ],
-      
     achievements: [
       "Montegam e manutenção de máquinas básicas e gamers",
       "Suporte ao Usuário",
@@ -25,11 +24,24 @@ const experiences = [
     location: "Manaus, AM",
     period: "2025 - Em Atividade",
     description:
-      "Atuo na área de desenvolvimento de sistemas tanto Front-end quanto Back-end, Inteligência Artificial e Data Science.",
+      "Desenvolvimento Full Stack com foco em arquitetura escalável, integração entre serviços e boas práticas de código. Participação em iniciativas de IA e Data Science aplicadas a produtos internos.",
     achievements: [
-      "Construi um software para gerenciar pagamentos com Next.js e Java",
-      "Suporte ao Usuário",
-      "Implementei utilidades no software melhorando a usabilidade do Usuário",
+      "Desenvolvimento integral de um software de gerenciamento de pagamentos implementado em 3 estados.",
+      "Criação de Landing Pages com suporte a internacionalização (i18n) em Português, Inglês e Espanhol.",
+      "Suporte técnico avançado e configuração de ambientes e infraestrutura (Windows e Linux/Ubuntu).",
+    ],
+  },
+  {
+    title: "Jr Software Developer",
+    company: "Indicaí",
+    location: "Manaus, AM",
+    period: "2025 - Em Atividade",
+    description:
+      "Atuação como Jr Software Developer em soluções Full Stack e práticas DevOps. Definição de arquitetura e padrões de código escaláveis, implementação de interfaces de alta fidelidade com foco em UX/UI, acessibilidade e performance, além do planejamento e execução do ciclo de deploy com publicação nas lojas (Play Store e App Store).",
+    achievements: [
+      "Atuação Full Stack e DevOps focada na definição de arquitetura e padrões de código escaláveis.",
+      "Implementação de interfaces de alta fidelidade, priorizando UX/UI, acessibilidade e performance.",
+      "Planejamento e execução do ciclo de deploy, incluindo o lançamento do aplicativo nas lojas (Play Store e App Store).",
     ],
   },
   {
@@ -37,11 +49,12 @@ const experiences = [
     company: "NXS Skill",
     location: "Manaus, AM",
     period: "2025 - Em Atividade",
-    description: "Atuo na área de Desenvolvimento de Software na área de Front-end",
+    description:
+      "Desenvolvimento Front-end em plataforma educacional, com ênfase em acessibilidade, performance e experiências ricas de UI. Colaboração em design system e otimizações nos fluxos de autenticação.",
     achievements: [
-      "Atuando na construção do software principal",
-      "Aplicação de soluções UX/UI focando em acessibilidade",
-      "Implementei o login com google e outras utilidades do usuário",
+      "Desenvolvimento da versão 2.0 da plataforma web, atuando em colaboração com uma equipe de 6 desenvolvedores.",
+      "Construção de interfaces responsivas complexas (autenticação, cadastros e dashboards) utilizando Next.js e TypeScript.",
+      "Implementação de módulos e rotas de API no Back-end para suporte às novas funcionalidades do sistema",
     ],
   },
 ]
@@ -113,7 +126,7 @@ export function ExperienceSection() {
                       <ul className="space-y-2">
                         {exp.achievements.map((achievement, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm">
-                            <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                            <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0"></div>
                             <span>{achievement}</span>
                           </li>
                         ))}

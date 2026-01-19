@@ -20,7 +20,31 @@ const projects = [
       "Software de PDV usado para gerenciamento de vendas e clientes sem a necessidade de um estoque base",
     image: "/master-control-image.png",
     technologies: ["PHP", "Javascript", "MySQL", "Tailwind"],
-    demo: "https://github.com/daviPeter07/Master-Control",
+    code: "https://github.com/daviPeter07/Master-Control",
+  },
+  {
+    title: "Master Mind – Landing Page",
+    description:
+      "Landing page para divulgação do aplicativo Master Mind (produtividade e controle financeiro integrado ao Google Calendar).",
+    image: "/mastermind-landing-page.png",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind", "Radix UI", "Lucide"],
+    demo: "https://mastermind-landing-page.vercel.app/",
+  },
+  {
+    title: "Jus Fácil",
+    description:
+      "Aplicativo jurídico open source para consulta e organização de súmulas, desenvolvido com Expo/React Native.",
+    image: "/jus-facil.png",
+    technologies: ["Expo", "React Native", "TypeScript", "Firebase", "NativeWind"],
+    code: "https://github.com/daviPeter07/jus-facil",
+  },
+  {
+    title: "Robótica Educacional",
+    description:
+      "Site institucional do projeto acadêmico migrado para React + TypeScript, apresentando objetivos, equipe, metodologia STEAM e resultados.",
+    image: "/robotica-educacional.png",
+    technologies: ["React", "TypeScript", "Vite", "Tailwind", "shadcn/ui", "Radix UI", "Router"],
+    demo: "https://robotica-educacional.vercel.app/",
   },
 ]
 
@@ -74,12 +98,25 @@ export function ProjectsSection() {
                     className="w-full h-48 object-cover group-hover:scale-103 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                    <Button size="sm" asChild>
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Navegar
-                      </a>
-                    </Button>
+                    {project.code ? (
+                      <Button
+                        size="sm"
+                        asChild
+                        className="bg-[#0D1117] text-white hover:bg-[#161b22]"
+                      >
+                        <a href={project.code} target="_blank" rel="noopener noreferrer">
+                          <Github className="h-4 w-4 mr-2" />
+                          GitHub
+                        </a>
+                      </Button>
+                    ) : project.demo ? (
+                      <Button size="sm" asChild>
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          Navegar
+                        </a>
+                      </Button>
+                    ) : null}
                   </div>
                 </div>
 
