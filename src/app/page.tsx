@@ -6,6 +6,7 @@ import { ProjectsSection } from "@/src/components/projects-section"
 import { ExperienceSection } from "@/src/components/experience-section"
 import { ContactSection } from "@/src/components/contact-section"
 import { Footer } from "@/src/components/footer"
+import { BackToTopButton } from "@/src/components/back-to-top-button"
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <ExperienceSection />
       <ContactSection />
       <Footer />
+      <BackToTopButton threshold={300} />
     </main>
   )
 }
