@@ -19,6 +19,19 @@ const experiences = [
     ],
   },
   {
+    title: "Frontend Developer",
+    company: "NXS Skill",
+    location: "Manaus, AM",
+    period: "2025 - Em Atividade",
+    description:
+      "Desenvolvimento Front-end em plataforma educacional, com ênfase em acessibilidade, performance e experiências ricas de UI. Colaboração em design system e otimizações nos fluxos de autenticação.",
+    achievements: [
+      "Desenvolvimento da versão 2.0 da plataforma web, atuando em colaboração com uma equipe de 6 desenvolvedores.",
+      "Construção de interfaces responsivas complexas (autenticação, cadastros e dashboards) utilizando Next.js e TypeScript.",
+      "Implementação de módulos e rotas de API no Back-end para suporte às novas funcionalidades do sistema",
+    ],
+  },
+  {
     title: "Full Stack Developer",
     company: "UAPE",
     location: "Manaus, AM",
@@ -42,19 +55,6 @@ const experiences = [
       "Atuação Full Stack e DevOps focada na definição de arquitetura e padrões de código escaláveis.",
       "Implementação de interfaces de alta fidelidade, priorizando UX/UI, acessibilidade e performance.",
       "Planejamento e execução do ciclo de deploy, incluindo o lançamento do aplicativo nas lojas (Play Store e App Store).",
-    ],
-  },
-  {
-    title: "Frontend Developer",
-    company: "NXS Skill",
-    location: "Manaus, AM",
-    period: "2025 - Em Atividade",
-    description:
-      "Desenvolvimento Front-end em plataforma educacional, com ênfase em acessibilidade, performance e experiências ricas de UI. Colaboração em design system e otimizações nos fluxos de autenticação.",
-    achievements: [
-      "Desenvolvimento da versão 2.0 da plataforma web, atuando em colaboração com uma equipe de 6 desenvolvedores.",
-      "Construção de interfaces responsivas complexas (autenticação, cadastros e dashboards) utilizando Next.js e TypeScript.",
-      "Implementação de módulos e rotas de API no Back-end para suporte às novas funcionalidades do sistema",
     ],
   },
 ]
