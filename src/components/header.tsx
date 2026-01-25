@@ -4,10 +4,12 @@ import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/src/components/ui/button"
 import { ThemeToggle } from "@/src/components/theme-toggle"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/src/components/ui/select"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [lang, setLang] = useState("pt-BR")
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,8 +37,8 @@ export function Header() {
         <div className="flex items-center justify-between">
           <div className="text-xl font-bold text-primary">Davi Peterson</div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation - centered */}
+          <div className="hidden md:flex flex-1 items-center justify-center space-x-8">
             <button onClick={() => scrollToSection("inicio")} className="hover:text-primary transition-colors">
               Início
             </button>
@@ -46,21 +48,43 @@ export function Header() {
             <button onClick={() => scrollToSection("tecnologias")} className="hover:text-primary transition-colors">
               Tecnologias
             </button>
-            <button onClick={() => scrollToSection("projetos")} className="hover:text-primary transition-colors">
-              Projetos
-            </button>
             <button onClick={() => scrollToSection("experiencia")} className="hover:text-primary transition-colors">
               Experiência
+            </button>
+            <button onClick={() => scrollToSection("projetos")} className="hover:text-primary transition-colors">
+              Projetos
             </button>
             <button onClick={() => scrollToSection("contato")} className="hover:text-primary transition-colors">
               Contato
             </button>
+          </div>
+
+          {/* Desktop Right Controls */}
+          <div className="hidden md:flex items-center space-x-3">
             <ThemeToggle />
+            <Select value={lang} onValueChange={setLang}>
+              <SelectTrigger size="sm" aria-label="Idioma">
+                <SelectValue placeholder="Idioma" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="pt-BR">Português</SelectItem>
+                <SelectItem value="en" disabled>English (coming soon)</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
 
           {/* Mobile Navigation */}
           <div className="md:hidden flex items-center space-x-2">
             <ThemeToggle />
+            <Select value={lang} onValueChange={setLang}>
+              <SelectTrigger size="sm" aria-label="Idioma">
+                <SelectValue placeholder="Idioma" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="pt-BR">Português</SelectItem>
+                <SelectItem value="en" disabled>English (coming soon)</SelectItem>
+              </SelectContent>
+            </Select>
             <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -90,16 +114,16 @@ export function Header() {
                 Tecnologias
               </button>
               <button
-                onClick={() => scrollToSection("projetos")}
-                className="text-left hover:text-primary transition-colors"
-              >
-                Projetos
-              </button>
-              <button
                 onClick={() => scrollToSection("experiencia")}
                 className="text-left hover:text-primary transition-colors"
               >
                 Experiência
+              </button>
+              <button
+                onClick={() => scrollToSection("projetos")}
+                className="text-left hover:text-primary transition-colors"
+              >
+                Projetos
               </button>
               <button
                 onClick={() => scrollToSection("contato")}

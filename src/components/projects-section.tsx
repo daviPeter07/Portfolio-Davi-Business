@@ -67,7 +67,7 @@ export function ProjectsSection() {
           setIsVisible(true)
         }
       },
-      { threshold: 0.3 },
+      { threshold: 0.1, rootMargin: "0px 0px 150px 0px" },
     )
 
     if (sectionRef.current) {
@@ -88,15 +88,7 @@ export function ProjectsSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Meus <span className="text-primary">Projetos</span>
           </h2>
-
-          {/* <div className="flex items-center justify-center h-40">
-            <p className="text-lg md:text-xl text-muted-foreground text-center italic">
-              🚀 Projetos em breve...
-            </p>
-          </div> */}
-
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {projects.map((project, index) => (
               <Card key={project.title} className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
                 <div className="relative overflow-hidden p-4">

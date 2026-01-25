@@ -15,8 +15,8 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <TechnologiesSection />
-      <ProjectsSection />
       <ExperienceSection />
+      <ProjectsSection />
       <ContactSection />
       <Footer />
       <BackToTopButton threshold={300} />

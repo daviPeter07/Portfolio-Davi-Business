@@ -70,7 +70,7 @@ export function ExperienceSection() {
           setIsVisible(true)
         }
       },
-      { threshold: 0.3 },
+      { threshold: 0.1, rootMargin: "0px 0px 150px 0px" },
     )
 
     if (sectionRef.current) {
