@@ -1,14 +1,20 @@
-import { Header } from "@/src/components/header"
-import { HeroSection } from "@/src/components/hero-section"
-import { AboutSection } from "@/src/components/about-section"
-import { TechnologiesSection } from "@/src/components/technologies-section"
-import { ProjectsSection } from "@/src/components/projects-section"
-import { ExperienceSection } from "@/src/components/experience-section"
-import { ContactSection } from "@/src/components/contact-section"
-import { Footer } from "@/src/components/footer"
-import { BackToTopButton } from "@/src/components/back-to-top-button"
+'use client';
+
+import { Header } from '@/src/components/header';
+import {
+  HeroSection,
+  AboutSection,
+  TechnologiesSection,
+  ProjectsSection,
+  ExperienceSection,
+  ContactSection,
+} from '@/src/sections';
+import { Footer } from '@/src/components/footer';
+import { BackToTopButton } from '@/src/components/back-to-top-button';
+import { useReveal } from '@/src/hooks/use-reveal';
 
 export default function Home() {
+  useReveal();
   return (
     <main className="min-h-screen">
       <Header />
@@ -21,5 +27,5 @@ export default function Home() {
       <Footer />
       <BackToTopButton threshold={300} />
     </main>
-  )
+  );
 }

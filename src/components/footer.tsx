@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 
 export function Footer() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -16,12 +16,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center text-center">
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-bold text-primary mb-4">
-              Davi Peterson
-            </h3>
+            <h3 className="text-xl font-bold text-primary mb-4">Davi Peterson</h3>
             <p className="text-muted-foreground leading-relaxed max-w-md">
-              Desenvolvedor Full Stack apaixonado por criar soluções digitais
-              inovadoras e experiências de usuário excepcionais.
+              Desenvolvedor Full Stack apaixonado por criar soluções digitais inovadoras e
+              experiências de usuário excepcionais.
             </p>
           </div>
 
@@ -30,7 +28,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <button
-                  onClick={() => scrollToSection("inicio")}
+                  onClick={() => scrollToSection('inicio')}
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Início
@@ -38,7 +36,7 @@ export function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("sobre")}
+                  onClick={() => scrollToSection('sobre')}
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Sobre
@@ -46,7 +44,7 @@ export function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("projetos")}
+                  onClick={() => scrollToSection('projetos')}
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Projetos
@@ -54,7 +52,7 @@ export function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("contato")}
+                  onClick={() => scrollToSection('contato')}
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Contato
@@ -95,8 +93,7 @@ export function Footer() {
         {/* Rodapé final */}
         <div className="border-t mt-8 pt-8 text-center">
           <p className="text-muted-foreground flex items-center justify-center gap-2">
-            Feito com <Heart className="h-4 w-4 text-red-500" /> e café por Davi
-            Peterson © 2025
+            Feito com <Heart className="h-4 w-4 text-red-500" /> e café por Davi Peterson © 2025
           </p>
         </div>
       </div>

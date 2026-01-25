@@ -1,32 +1,33 @@
-"use client"
+'use client';
 
-import { useEffect, useState } from "react"
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
-import { Button } from "@/src/components/ui/button"
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { Button } from '@/src/components/ui/button';
 
 export function HeroSection() {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
-
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: 'smooth' });
     }
-  }
+  };
 
   return (
-    <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="inicio"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       <div className="container mx-auto px-4 text-center">
         <div
-          className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          data-reveal
+          className="transition-all duration-1000 opacity-0 translate-y-10 data-[revealed=true]:opacity-100 data-[revealed=true]:translate-y-0"
         >
           <div className="mb-8">
             <div className="w-40 h-40 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary to-accent overflow-hidden">
-              <img src="/meProfessional.jpg" alt="Davi Peterson" className="w-full h-full object-cover" />
+              <img
+                src="/meProfessional.jpg"
+                alt="Davi Peterson"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
@@ -42,7 +43,7 @@ export function HeroSection() {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              onClick={() => window.open("https://github.com/daviPeter07", "_blank")}
+              onClick={() => window.open('https://github.com/daviPeter07', '_blank')}
             >
               Ver Projetos
             </Button>
@@ -75,7 +76,10 @@ export function HeroSection() {
             >
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="mailto:davipetersondev173@gmail.com?subject=Contato%20pelo%20Portfólio&body=Olá,%20Davi!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar." className="text-muted-foreground hover:text-primary transition-colors">
+            <a
+              href="mailto:davipetersondev173@gmail.com?subject=Contato%20pelo%20Portfólio&body=Olá,%20Davi!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               <Mail className="h-6 w-6" />
             </a>
           </div>
@@ -83,11 +87,11 @@ export function HeroSection() {
       </div>
 
       <button
-        onClick={() => scrollToSection("sobre")}
+        onClick={() => scrollToSection('sobre')}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
       >
         <ArrowDown className="h-6 w-6 text-primary" />
       </button>
     </section>
-  )
+  );
 }
