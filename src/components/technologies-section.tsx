@@ -2,109 +2,9 @@
 
 import { useEffect, useRef, useState } from "react"
 import { Code2, Server, Smartphone, Wrench } from "lucide-react"
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/src/components/ui/hover-card"
+import { frontEnd, backEnd, additional, mobile, techDocs } from "@/src/constants/technologies"
 
-const frontEnd = [
-  {
-    name: "HTML",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-  },
-  {
-    name: "CSS",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-  },
-  {
-    name: "JavaScript",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-  },
-  {
-    name: "TypeScript",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  },
-  {
-    name: "ReactJS",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  },
-  {
-    name: "Next.js",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-  },
-  {
-    name: "Tailwind CSS",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-  },
-]
-
-const backEnd = [
-  {
-    name: "Node.js",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-  },
-  {
-    name: "TypeScript",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  },
-  {
-    name: "Nest.js",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg",
-  },
-  {
-    name: "PHP",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-  },
-  {
-    name: "MySQL",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-  },
-  {
-    name: "PostgreSQL",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-  },
-]
-
-const additional = [
-  {
-    name: "Docker",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-  },
-  {
-    name: "Git",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-  },
-  {
-    name: "Prisma ORM",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
-  },
-  {
-    name: "Jest",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
-  },
-  {
-    name: "Figma",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-  },
-]
-const mobile = [
-  {
-    name: "React Native",
-    logo: "https://cdn.worldvectorlogo.com/logos/react-native-1.svg",
-  },
-  {
-    name: "Expo Go",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg",
-  },
-  {
-    name: "NativeWind",
-    logo: "https://github.com/nativewind.png",
-  },
-  {
-    name: "SQLite",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
-  },
-  {
-    name: "TypeScript",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  },
-]
 export function TechnologiesSection() {
 
   const [isVisible, setIsVisible] = useState(false)
@@ -146,16 +46,36 @@ export function TechnologiesSection() {
                 <span className="ml-auto px-2 py-0.5 text-xs rounded-full bg-primary/10 text-primary">Stacks</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                {frontEnd.map((tech) => (
-                  <div
-                    key={tech.name}
-                    title={tech.name}
-                    className="group flex items-center gap-3 p-3 rounded-lg border bg-muted/30 hover:bg-muted transition-transform hover:-translate-y-0.5 hover:ring-1 ring-primary/20"
-                  >
-                    <img src={tech.logo} alt={tech.name} title={tech.name} className="w-9 h-9" />
-                    <span className="font-semibold text-base whitespace-normal break-words">{tech.name}</span>
-                  </div>
-                ))}
+                {frontEnd.map((tech) => {
+                  const info = techDocs[tech.name]
+                  return (
+                    <HoverCard key={tech.name}>
+                      <HoverCardTrigger asChild>
+                        <div
+                          title={tech.name}
+                          className="group flex items-center gap-3 p-3 rounded-lg border bg-muted/30 hover:bg-muted transition-transform hover:-translate-y-0.5 hover:ring-1 ring-primary/20"
+                        >
+                          <img src={tech.logo} alt={tech.name} title={tech.name} className="w-9 h-9" />
+                          <span className="font-semibold text-base whitespace-normal break-words">{tech.name}</span>
+                        </div>
+                      </HoverCardTrigger>
+                      <HoverCardContent sideOffset={8} align="center">
+                        <div className="space-y-2">
+                          <div className="text-sm font-semibold">{tech.name}</div>
+                          <p className="text-sm text-muted-foreground">{info?.desc}</p>
+                          <a
+                            href={info?.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm text-primary hover:underline"
+                          >
+                            Documentação
+                          </a>
+                        </div>
+                      </HoverCardContent>
+                    </HoverCard>
+                  )
+                })}
               </div>
             </div>
 
@@ -166,16 +86,36 @@ export function TechnologiesSection() {
                 <span className="ml-auto px-2 py-0.5 text-xs rounded-full bg-primary/10 text-primary">Stacks</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                {backEnd.map((tech) => (
-                  <div
-                    key={tech.name}
-                    title={tech.name}
-                    className="group flex items-center gap-3 p-3 rounded-lg border bg-muted/30 hover:bg-muted transition-transform hover:-translate-y-0.5 hover:ring-1 ring-primary/20"
-                  >
-                    <img src={tech.logo} alt={tech.name} title={tech.name} className="w-9 h-9" />
-                    <span className="font-semibold text-base whitespace-normal break-words">{tech.name}</span>
-                  </div>
-                ))}
+                {backEnd.map((tech) => {
+                  const info = techDocs[tech.name]
+                  return (
+                    <HoverCard key={tech.name}>
+                      <HoverCardTrigger asChild>
+                        <div
+                          title={tech.name}
+                          className="group flex items-center gap-3 p-3 rounded-lg border bg-muted/30 hover:bg-muted transition-transform hover:-translate-y-0.5 hover:ring-1 ring-primary/20"
+                        >
+                          <img src={tech.logo} alt={tech.name} title={tech.name} className="w-9 h-9" />
+                          <span className="font-semibold text-base whitespace-normal break-words">{tech.name}</span>
+                        </div>
+                      </HoverCardTrigger>
+                      <HoverCardContent sideOffset={8} align="center">
+                        <div className="space-y-2">
+                          <div className="text-sm font-semibold">{tech.name}</div>
+                          <p className="text-sm text-muted-foreground">{info?.desc}</p>
+                          <a
+                            href={info?.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm text-primary hover:underline"
+                          >
+                            Documentação
+                          </a>
+                        </div>
+                      </HoverCardContent>
+                    </HoverCard>
+                  )
+                })}
               </div>
             </div>
 
@@ -186,33 +126,52 @@ export function TechnologiesSection() {
                 <span className="ml-auto px-2 py-0.5 text-xs rounded-full bg-primary/10 text-primary">Stacks</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                {mobile.map((tech) => (
-                  <div
-                    key={tech.name}
-                    title={tech.name}
-                    className="group flex items-center gap-3 p-3 rounded-lg border bg-muted/30 hover:bg-muted transition-transform hover:-translate-y-0.5 hover:ring-1 ring-primary/20"
-                  >
-                    {/*Gambiarra pra adaptar a foto do native wind rs*/}
-                    {tech.name === "NativeWind" ? (
-                      <span className="w-9 h-9 bg-white rounded-md overflow-hidden flex items-center justify-center">
-                        <img
-                          src={tech.logo}
-                          alt={tech.name}
+                {mobile.map((tech) => {
+                  const info = techDocs[tech.name]
+                  return (
+                    <HoverCard key={tech.name}>
+                      <HoverCardTrigger asChild>
+                        <div
                           title={tech.name}
-                          className="w-12 h-12 object-contain"
-                        />
-                      </span>
-                    ) : (
-                      <img
-                        src={tech.logo}
-                        alt={tech.name}
-                        title={tech.name}
-                        className="w-9 h-9 object-contain"
-                      />
-                    )}
-                    <span className="font-semibold text-base whitespace-normal break-words">{tech.name}</span>
-                  </div>
-                ))}
+                          className="group flex items-center gap-3 p-3 rounded-lg border bg-muted/30 hover:bg-muted transition-transform hover:-translate-y-0.5 hover:ring-1 ring-primary/20"
+                        >
+                          {tech.name === "NativeWind" ? (
+                            <span className="w-9 h-9 bg-white rounded-md overflow-hidden flex items-center justify-center">
+                              <img
+                                src={tech.logo}
+                                alt={tech.name}
+                                title={tech.name}
+                                className="w-12 h-12 object-contain"
+                              />
+                            </span>
+                          ) : (
+                            <img
+                              src={tech.logo}
+                              alt={tech.name}
+                              title={tech.name}
+                              className="w-9 h-9 object-contain"
+                            />
+                          )}
+                          <span className="font-semibold text-base whitespace-normal break-words">{tech.name}</span>
+                        </div>
+                      </HoverCardTrigger>
+                      <HoverCardContent sideOffset={8} align="center">
+                        <div className="space-y-2">
+                          <div className="text-sm font-semibold">{tech.name}</div>
+                          <p className="text-sm text-muted-foreground">{info?.desc}</p>
+                          <a
+                            href={info?.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm text-primary hover:underline"
+                          >
+                            Documentação
+                          </a>
+                        </div>
+                      </HoverCardContent>
+                    </HoverCard>
+                  )
+                })}
               </div>
             </div>
 
@@ -223,16 +182,36 @@ export function TechnologiesSection() {
                 <span className="ml-auto px-2 py-0.5 text-xs rounded-full bg-primary/10 text-primary">Stacks</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                {additional.map((tool) => (
-                  <div
-                    key={tool.name}
-                    title={tool.name}
-                    className="group flex items-center gap-3 p-3 rounded-lg border bg-muted/30 hover:bg-muted transition-transform hover:-translate-y-0.5 hover:ring-1 ring-primary/20"
-                  >
-                    <img src={tool.logo} alt={tool.name} title={tool.name} className="w-9 h-9" />
-                    <span className="font-semibold text-base whitespace-normal break-words">{tool.name}</span>
-                  </div>
-                ))}
+                {additional.map((tool) => {
+                  const info = techDocs[tool.name]
+                  return (
+                    <HoverCard key={tool.name}>
+                      <HoverCardTrigger asChild>
+                        <div
+                          title={tool.name}
+                          className="group flex items-center gap-3 p-3 rounded-lg border bg-muted/30 hover:bg-muted transition-transform hover:-translate-y-0.5 hover:ring-1 ring-primary/20"
+                        >
+                          <img src={tool.logo} alt={tool.name} title={tool.name} className="w-9 h-9" />
+                          <span className="font-semibold text-base whitespace-normal break-words">{tool.name}</span>
+                        </div>
+                      </HoverCardTrigger>
+                      <HoverCardContent sideOffset={8} align="center">
+                        <div className="space-y-2">
+                          <div className="text-sm font-semibold">{tool.name}</div>
+                          <p className="text-sm text-muted-foreground">{info?.desc}</p>
+                          <a
+                            href={info?.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm text-primary hover:underline"
+                          >
+                            Documentação
+                          </a>
+                        </div>
+                      </HoverCardContent>
+                    </HoverCard>
+                  )
+                })}
               </div>
             </div>
           </div>
