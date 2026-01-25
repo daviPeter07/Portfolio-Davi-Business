@@ -9,18 +9,18 @@ const projects = [
   {
     title: "Nexus Skills",
     description:
-      "Plataforma Nexus Skill com cursos para potencializar as softs skills das pessoas",
+    "Plataforma Nexus Skill com cursos para potencializar as softs skills das pessoas",
     image: "/nexus-skill-web-image.png",
     technologies: ["Next.js", "Typescript", "Tailwind" ,"Firebase"],
     demo: "https://skill.nxshub.com.br/",
   },
   {
-    title: "Master Control",
+    title: "UAPE",
     description:
-      "Software de PDV usado para gerenciamento de vendas e clientes sem a necessidade de um estoque base",
-    image: "/master-control-image.png",
-    technologies: ["PHP", "Javascript", "MySQL", "Tailwind"],
-    code: "https://github.com/daviPeter07/Master-Control",
+      "Landing institucional que apresenta a engenharia de dados em saúde global da UAPÉ: soberania de dados, implantação rápida, coleta móvel offline-first, integração entre sistemas de saúde e visualizações em tempo real. Suporte a 3 idiomas (PT/EN/ES).",
+    image: "/uape.png",
+    technologies: ["Next.js", "TypeScript", "Cloudflare", "shadcn/ui", "Tailwind", "Lucide React", "i18n"],
+    demo: "https://uape.us/",
   },
   {
     title: "Master Mind – Landing Page",
@@ -29,6 +29,14 @@ const projects = [
     image: "/mastermind-landing-page.png",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind", "Radix UI", "Lucide"],
     demo: "https://mastermind-landing-page.vercel.app/",
+  },
+  {
+    title: "Master Control",
+    description:
+      "Software de PDV usado para gerenciamento de vendas e clientes sem a necessidade de um estoque base",
+    image: "/master-control-image.png",
+    technologies: ["PHP", "Javascript", "MySQL", "Tailwind"],
+    code: "https://github.com/daviPeter07/Master-Control",
   },
   {
     title: "Jus Fácil",
