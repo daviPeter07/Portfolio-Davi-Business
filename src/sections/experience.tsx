@@ -20,49 +20,50 @@ export function ExperienceSection() {
 
           <div className="max-w-4xl mx-auto">
             <div className="relative">
-              <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-px bg-border" />
-              <div className="space-y-8">
-                {experiences.map((exp, i) => (
-                  <div key={exp.title} className="relative grid md:grid-cols-[1fr_1fr] gap-6">
-                    <div className="flex items-start gap-3">
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                        <Laptop className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold">{exp.title}</h3>
-                        <div className="text-muted-foreground">{exp.company}</div>
-                      </div>
-                    </div>
+              <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-border"></div>
 
-                    <div className="pl-0 md:pl-8">
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <div className="flex items-center gap-2">
-                          <Calendar className="h-4 w-4" />
-                          {exp.period}
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <MapPin className="h-4 w-4" />
-                          {exp.location}
-                        </div>
-                        <div className="hidden md:flex items-center gap-2">
-                          <Laptop className="h-4 w-4" />
-                          {exp.modality}
-                        </div>
+              {experiences.map((exp, index) => (
+                <div
+                  key={exp.title}
+                  className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                >
+                  <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background z-10"></div>
+
+                  <div
+                    className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}
+                  >
+                    <div className="bg-card p-6 rounded-lg border shadow-sm hover:shadow-md transition-shadow">
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                        <Calendar className="h-4 w-4" />
+                        {exp.period}
                       </div>
 
-                      <p className="mt-3 text-muted-foreground">{exp.description}</p>
+                      <h3 className="text-xl font-semibold mb-1">{exp.title}</h3>
+                      <div className="flex items-center gap-2 text-primary font-medium mb-2">
+                        <span>{exp.company}</span>
+                      </div>
 
-                      <ul className="mt-4 space-y-2">
-                        {exp.achievements.map((a) => (
-                          <li key={a} className="text-sm text-muted-foreground">
-                            • {a}
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
+                        <MapPin className="h-4 w-4" />
+                        {exp.location}
+                      </div>
+
+                      <p className="text-muted-foreground mb-4 leading-relaxed">
+                        {exp.description}
+                      </p>
+
+                      <ul className="space-y-2">
+                        {exp.achievements.map((achievement) => (
+                          <li key={achievement} className="flex items-start gap-2 text-sm">
+                            <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0"></div>
+                            <span>{achievement}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

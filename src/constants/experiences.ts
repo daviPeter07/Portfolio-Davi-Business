@@ -14,6 +14,20 @@ export const experiences = [
     ],
   },
   {
+    title: 'Full Stack Developer (Estágio)',
+    company: 'UAPE',
+    location: 'Manaus, AM',
+    period: '06-2025 - Em Atividade',
+    modality: 'Híbrido',
+    description:
+      'Estágio em desenvolvimento Full Stack com foco em arquitetura escalável, integração entre serviços e boas práticas de código. Participação em iniciativas de IA e Data Science aplicadas a produtos internos.',
+    achievements: [
+      'Desenvolvimento integral de um software de gerenciamento de pagamentos implementado em 3 estados.',
+      'Criação de Landing Pages com suporte a internacionalização (i18n) em Português, Inglês e Espanhol.',
+      'Suporte técnico avançado e configuração de ambientes e infraestrutura (Windows e Linux/Ubuntu).',
+    ],
+  },
+  {
     title: 'Frontend Developer',
     company: 'NXS Skill',
     location: 'Manaus, AM',
