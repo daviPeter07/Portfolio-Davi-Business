@@ -51,8 +51,8 @@ export function Header() {
             Davi Peterson
           </button>
 
-          {/* Desktop Navigation - centered */}
-          <div className="hidden md:flex flex-1 items-center justify-center space-x-8">
+          {/* Desktop Navigation - centered (show only on lg and above) */}
+          <div className="hidden lg:flex flex-1 items-center justify-center space-x-6">
             <button
               onClick={() => scrollToSection('inicio')}
               className="hover:text-primary transition-colors"
@@ -91,8 +91,8 @@ export function Header() {
             </button>
           </div>
 
-          {/* Desktop Right Controls */}
-          <div className="hidden md:flex items-center space-x-3">
+          {/* Desktop Right Controls (show only on lg and above) */}
+          <div className="hidden lg:flex items-center space-x-3">
             <ThemeToggle />
             <Select value={lang} onValueChange={setLang}>
               <SelectTrigger size="sm" aria-label="Idioma">
@@ -107,8 +107,8 @@ export function Header() {
             </Select>
           </div>
 
-          {/* Mobile Navigation */}
-          <div className="md:hidden flex items-center space-x-2">
+          {/* Mobile/Tablet Navigation (show below lg) */}
+          <div className="lg:hidden flex items-center space-x-2">
             <ThemeToggle />
             <Select value={lang} onValueChange={setLang}>
               <SelectTrigger size="sm" aria-label="Idioma">
@@ -127,9 +127,9 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border">
+          {/* Mobile/Tablet Menu (show below lg) */}
+          {isMenuOpen && (
+            <div className="lg:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col space-y-4 pt-4">
               <button
                 onClick={() => scrollToSection('inicio')}

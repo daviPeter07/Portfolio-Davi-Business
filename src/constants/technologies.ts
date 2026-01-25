@@ -180,7 +180,7 @@ export const techDocs: Record<string, { desc: string; url: string }> = {
   },
   Jest: {
     desc: 'Framework de testes em JavaScript com mocks e asserts.',
-    url: 'https://jestjs.io/docs',
+    url: 'https://jestjs.io/docs/getting-started',
   },
   Figma: {
     desc: 'Ferramenta de design colaborativa para UI/UX.',
@@ -188,7 +188,7 @@ export const techDocs: Record<string, { desc: string; url: string }> = {
   },
   'React Native': {
     desc: 'Framework para apps móveis usando React e JavaScript.',
-    url: 'https://reactnative.dev/docs',
+    url: 'https://reactnative.dev/docs/getting-started',
   },
   'Expo Go': {
     desc: 'Ferramenta para rodar e desenvolver apps React Native.',
