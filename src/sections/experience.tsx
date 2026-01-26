@@ -8,7 +8,7 @@ export function ExperienceSection() {
   const sectionRef = useRef<HTMLElement>(null);
 
   return (
-    <section id="experiencia" ref={sectionRef} className="py-20">
+    <section id="experiencia" ref={sectionRef} className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div
           data-reveal
@@ -29,9 +29,7 @@ export function ExperienceSection() {
                 >
                   <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background z-10"></div>
 
-                  <div
-                    className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}
-                  >
+                  <div className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
                     <div className="bg-card p-6 rounded-lg border shadow-sm hover:shadow-md transition-shadow">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                         <Calendar className="h-4 w-4" />
@@ -48,9 +46,7 @@ export function ExperienceSection() {
                         {exp.location}
                       </div>
 
-                      <p className="text-muted-foreground mb-4 leading-relaxed">
-                        {exp.description}
-                      </p>
+                      <p className="text-muted-foreground mb-4 leading-relaxed">{exp.description}</p>
 
                       <ul className="space-y-2">
                         {exp.achievements.map((achievement) => (
