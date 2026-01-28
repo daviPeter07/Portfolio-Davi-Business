@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { Calendar, MapPin, Laptop } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 import { experiences } from '@/src/constants/experiences';
 
 export function ExperienceSection() {
